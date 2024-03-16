@@ -10,11 +10,15 @@ class DayListLogbookMbkm extends StatefulWidget {
 }
 
 class _DayListLogbookMbkmState extends State<DayListLogbookMbkm> {
-  // List<String> labels = ['S', 'S', 'R', 'K', 'J'];
-  // List<String> statusHari = ['check', 'cross', 'check', 'empty', 'empty'];
   List<String> daysOfWeek = [
     'Senin',
     'Selasa',
+    'Rabu',
+  ];
+  List<String> dateMounthYearOfWeek = [
+    '15 Mar 2024',
+    '16 Mar 2024',
+    '17 Mar 2024',
   ];
 
   @override
@@ -58,7 +62,7 @@ class _DayListLogbookMbkmState extends State<DayListLogbookMbkm> {
                   ),
               ],
             ),
-            SizedBox(height: 20.0),
+            SizedBox(height: 10.0),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -88,7 +92,7 @@ class _DayListLogbookMbkmState extends State<DayListLogbookMbkm> {
                               ),
                             ),
                             Text(
-                              '15 Mar 2024',
+                              dateMounthYearOfWeek[i],
                               style: TextStyle(
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.bold,

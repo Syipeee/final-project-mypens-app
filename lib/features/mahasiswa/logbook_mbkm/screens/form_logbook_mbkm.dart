@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mypens/features/mahasiswa/logbook_mbkm/screens/day/day_list_logbook_mbkm.dart';
 
 class FormLogbookMbkm extends StatefulWidget {
   const FormLogbookMbkm({Key? key}) : super(key: key);
@@ -101,6 +102,12 @@ class _FormLogbookMbkmState extends State<FormLogbookMbkm> {
             SizedBox(height: 32),
             ElevatedButton(
               onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DayListLogbookMbkm(),
+                  ),
+                );
                 print('Jam Mulai: ${startTimeController.text}');
                 print('Jam Berakhir: ${endTimeController.text}');
                 print('Kegiatan/Materi: ${activityController.text}');
